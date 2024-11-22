@@ -34,7 +34,7 @@ namespace ScriptHelper
 
         public static string forkTitle = "";
 
-        public static string programVersion = "0.95";
+        public static string programVersion = "0.96";
 
         public static string dumpJSONpwd = "phantom";
         public static int dataVersion = 3;
@@ -185,7 +185,7 @@ namespace ScriptHelper
 
             if (model.StartsWith("or/"))
             {
-                totalTokens = int.Parse(FormApp1._openRouterModels.Where(x => x.id == model.Replace("or/","")).FirstOrDefault().per_request_limits.prompt_tokens);
+                totalTokens = int.Parse(FormApp1._openRouterModels.Where(x => x.id == model.Replace("or/","")).FirstOrDefault().per_request_limits?.prompt_tokens ?? "100000");
             }
 
             int promptTokens = tokenCount(prompts);

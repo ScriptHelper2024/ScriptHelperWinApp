@@ -79,9 +79,6 @@ namespace ScriptHelper
 
         public string __gptModel = "automatic";
 
-        Image upArrow = null;
-        Image downArrow = null;
-
         string rootDir = Utils.rootDir();
         string moviesDir = Utils.moviesDir();
         string styleFile = "c:\\scripthelper-001\\stylesV2.json";
@@ -257,10 +254,6 @@ namespace ScriptHelper
             //MovieSceneListLabel.MaximumSize = new Size(350, 300);
 
             this.StartPosition = FormStartPosition.CenterScreen;
-            upArrow = Image.FromFile("uparrow.png");
-            downArrow = Image.FromFile("downarrow.png");
-            SceneUpArrow.Image = upArrow;
-            SceneDownArrow.Image = downArrow;
             setDiaglogFlavorChecked(); // sets single event handler for all Flavor Dialog Buttons
             ErrorMessage.Text = "";
 
@@ -5589,16 +5582,16 @@ namespace ScriptHelper
         }
 
         bool ignoreNextKeyChange = false;
-        private async void openRouterKeyTextBox_TextChanged(object sender, EventArgs e)
+        private void openRouterKeyTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (openRouterKeyTextBox.Text == null || openRouterKeyTextBox.Text.Length != 73 || ignoreNextKeyChange) return;
             if (ignoreNextKeyChange)
             {
                 ignoreNextKeyChange = false;
                 return;
             }
+            if (openRouterKeyTextBox.Text == null || openRouterKeyTextBox.Text.Length != 73 || ignoreNextKeyChange) return;
             Api.openRouterKey = openRouterKeyTextBox.Text;
-            await LoadOpenRouterModels();
+            _ = LoadOpenRouterModels();
             // save key to file
             try
             {
@@ -5607,7 +5600,7 @@ namespace ScriptHelper
                 {
                     writer.WriteLine(Api.openRouterKey);
                 }
-                MessageBox.Show("Key saved!");
+                //MessageBox.Show("Key saved!");
             }
             catch (Exception ex)
             {

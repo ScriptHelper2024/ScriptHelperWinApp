@@ -32,13 +32,13 @@ namespace ScriptHelper
 
         public static async Task<string> OpenRouterModels()
         {
-            if (openRouterKey == null)
-            {
-                throw new Exception("OpenRouter Key Missing");
-            }
+            //if (openRouterKey == null)
+            //{
+            //    throw new Exception("OpenRouter Key Missing");
+            //}
             using (var httpClient = new HttpClient())
             {
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", openRouterKey);
+                //httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", openRouterKey);
                 var apiResponse = await httpClient.GetAsync("https://openrouter.ai/api/v1/models");
                 var responseContent = await apiResponse.Content.ReadAsStringAsync();
                 return responseContent;
@@ -85,6 +85,10 @@ namespace ScriptHelper
                 var responseContent = await chatResponse.Content.ReadAsStringAsync();
                 var responseObj = JObject.Parse(responseContent);
                 var responseText = responseObj["choices"]?[0]?["message"]?["content"]?.ToString();
+                if (responseText ==  null)
+                {
+                    throw new Exception("Bad Response: " + responseContent);
+                }
                 return responseText;
             }
         }

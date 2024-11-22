@@ -1,4 +1,4 @@
-namespace ScriptHelper
+Ôªønamespace ScriptHelper
 {
     partial class FormApp1
     {
@@ -1171,17 +1171,20 @@ namespace ScriptHelper
             // 
             this.SceneUpArrow.Location = new System.Drawing.Point(7, 221);
             this.SceneUpArrow.Name = "SceneUpArrow";
-            this.SceneUpArrow.Size = new System.Drawing.Size(25, 30);
+            this.SceneUpArrow.Size = new System.Drawing.Size(25, 43);
             this.SceneUpArrow.TabIndex = 33;
+            this.SceneUpArrow.Text = "‚ñ≤";
             this.SceneUpArrow.UseVisualStyleBackColor = true;
             this.SceneUpArrow.Click += new System.EventHandler(this.SceneUpArrow_Click);
             // 
             // SceneDownArrow
             // 
+            this.SceneDownArrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SceneDownArrow.Location = new System.Drawing.Point(7, 282);
             this.SceneDownArrow.Name = "SceneDownArrow";
-            this.SceneDownArrow.Size = new System.Drawing.Size(25, 30);
+            this.SceneDownArrow.Size = new System.Drawing.Size(25, 46);
             this.SceneDownArrow.TabIndex = 34;
+            this.SceneDownArrow.Text = "‚ñº";
             this.SceneDownArrow.UseVisualStyleBackColor = true;
             this.SceneDownArrow.Click += new System.EventHandler(this.SceneDownArrow_Click);
             // 
@@ -1737,7 +1740,7 @@ namespace ScriptHelper
             // 
             this.CopyBeatSheetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CopyBeatSheetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CopyBeatSheetButton.Location = new System.Drawing.Point(273, 616);
+            this.CopyBeatSheetButton.Location = new System.Drawing.Point(273, 652);
             this.CopyBeatSheetButton.Name = "CopyBeatSheetButton";
             this.CopyBeatSheetButton.Size = new System.Drawing.Size(80, 32);
             this.CopyBeatSheetButton.TabIndex = 23;
@@ -1750,7 +1753,7 @@ namespace ScriptHelper
             // 
             this.MakeBeatSheet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.MakeBeatSheet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MakeBeatSheet.Location = new System.Drawing.Point(6, 616);
+            this.MakeBeatSheet.Location = new System.Drawing.Point(6, 652);
             this.MakeBeatSheet.Name = "MakeBeatSheet";
             this.MakeBeatSheet.Size = new System.Drawing.Size(212, 33);
             this.MakeBeatSheet.TabIndex = 22;
@@ -1767,7 +1770,7 @@ namespace ScriptHelper
             this.BeatSheetRichTextbox.Location = new System.Drawing.Point(6, 9);
             this.BeatSheetRichTextbox.Name = "BeatSheetRichTextbox";
             this.BeatSheetRichTextbox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.BeatSheetRichTextbox.Size = new System.Drawing.Size(351, 589);
+            this.BeatSheetRichTextbox.Size = new System.Drawing.Size(351, 625);
             this.BeatSheetRichTextbox.TabIndex = 20;
             this.BeatSheetRichTextbox.Text = "";
             // 
@@ -2141,7 +2144,7 @@ namespace ScriptHelper
             this.MakeAllEmptySceneTextsButton.Size = new System.Drawing.Size(160, 45);
             this.MakeAllEmptySceneTextsButton.TabIndex = 39;
             this.MakeAllEmptySceneTextsButton.Text = "Make All Empty Scene Texts";
-            this.ToolTipFork.SetToolTip(this.MakeAllEmptySceneTextsButton, "Generates Scene Texts for all scenes that donít have them");
+            this.ToolTipFork.SetToolTip(this.MakeAllEmptySceneTextsButton, "Generates Scene Texts for all scenes that don‚Äôt have them");
             this.MakeAllEmptySceneTextsButton.UseVisualStyleBackColor = true;
             this.MakeAllEmptySceneTextsButton.Click += new System.EventHandler(this.MakeAllEmptySceneTextsButton_Click);
             // 
@@ -2410,7 +2413,7 @@ namespace ScriptHelper
             this.label27.Size = new System.Drawing.Size(86, 20);
             this.label27.TabIndex = 5;
             this.label27.Text = "Back Story";
-            this.ToolTipFork.SetToolTip(this.label27, "The characterís life prior to the story, including education, socioeconomic backg" +
+            this.ToolTipFork.SetToolTip(this.label27, "The character‚Äôs life prior to the story, including education, socioeconomic backg" +
         "round, and important life events");
             // 
             // BackStoryLocked
@@ -2881,8 +2884,8 @@ namespace ScriptHelper
             this.label34.Size = new System.Drawing.Size(129, 17);
             this.label34.TabIndex = 3;
             this.label34.Text = "Rewrite Strength";
-            this.ToolTipFork.SetToolTip(this.label34, "Sets the degree of revision when using ìRewrite Movie Text with Character Attribu" +
-        "tesî");
+            this.ToolTipFork.SetToolTip(this.label34, "Sets the degree of revision when using ‚ÄúRewrite Movie Text with Character Attribu" +
+        "tes‚Äù");
             // 
             // StrengthHeavy
             // 
@@ -2895,8 +2898,8 @@ namespace ScriptHelper
             this.StrengthHeavy.TabIndex = 1;
             this.StrengthHeavy.TabStop = true;
             this.StrengthHeavy.Text = "Heavy";
-            this.ToolTipFork.SetToolTip(this.StrengthHeavy, "Sets the degree of revision when using ìRewrite Movie Text with Character Attribu" +
-        "tesî");
+            this.ToolTipFork.SetToolTip(this.StrengthHeavy, "Sets the degree of revision when using ‚ÄúRewrite Movie Text with Character Attribu" +
+        "tes‚Äù");
             this.StrengthHeavy.UseVisualStyleBackColor = true;
             // 
             // StrengthNormal
@@ -2910,8 +2913,8 @@ namespace ScriptHelper
             this.StrengthNormal.TabIndex = 0;
             this.StrengthNormal.TabStop = true;
             this.StrengthNormal.Text = "Normal";
-            this.ToolTipFork.SetToolTip(this.StrengthNormal, "Sets the degree of revision when using ìRewrite Movie Text with Character Attribu" +
-        "tesî");
+            this.ToolTipFork.SetToolTip(this.StrengthNormal, "Sets the degree of revision when using ‚ÄúRewrite Movie Text with Character Attribu" +
+        "tes‚Äù");
             this.StrengthNormal.UseVisualStyleBackColor = true;
             // 
             // RewriteMovieTextWithCharAttsButton
@@ -3060,7 +3063,7 @@ namespace ScriptHelper
             this.label17.Size = new System.Drawing.Size(111, 20);
             this.label17.TabIndex = 48;
             this.label17.Text = "Style Guides";
-            this.ToolTipFork.SetToolTip(this.label17, "Describe the style in which youíd like scenes written and/or formatted");
+            this.ToolTipFork.SetToolTip(this.label17, "Describe the style in which you‚Äôd like scenes written and/or formatted");
             // 
             // ScriptStyleGuideListbox
             // 
@@ -3127,7 +3130,7 @@ namespace ScriptHelper
             this.label22.Size = new System.Drawing.Size(117, 20);
             this.label22.TabIndex = 40;
             this.label22.Text = "Author Styles";
-            this.ToolTipFork.SetToolTip(this.label22, "Select a filmmaker or screenwriter whose style youíd like to imitate");
+            this.ToolTipFork.SetToolTip(this.label22, "Select a filmmaker or screenwriter whose style you‚Äôd like to imitate");
             // 
             // StyleSceneList
             // 
@@ -3256,7 +3259,7 @@ namespace ScriptHelper
             this.label51.Size = new System.Drawing.Size(111, 20);
             this.label51.TabIndex = 48;
             this.label51.Text = "Style Guides";
-            this.ToolTipFork.SetToolTip(this.label51, "Describe the style in which youíd like scenes written and/or formatted");
+            this.ToolTipFork.SetToolTip(this.label51, "Describe the style in which you‚Äôd like scenes written and/or formatted");
             // 
             // MovieTextStylesGuideListbox
             // 
