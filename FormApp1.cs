@@ -1246,21 +1246,17 @@ namespace ScriptHelper
 
         private void ForkMovieButton_Click(object sender, EventArgs e)
         {
-            FormFork forkForm = new FormFork(myMovie);
-            forkForm.StartPosition = FormStartPosition.CenterScreen;
-            forkForm.ShowDialog();
-
-            if (!Utils.fork) return;
-
             DialogResult dialogResult = MessageBox.Show("Save Current Movie before forking?", "", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 saveCurrentMovie();
             }
-            else if (dialogResult == DialogResult.No)
-            {
 
-            }
+            FormFork forkForm = new FormFork(myMovie);
+            forkForm.StartPosition = FormStartPosition.CenterScreen;
+            forkForm.ShowDialog();
+
+            if (!Utils.fork) return;
 
             string newFileName = Utils.makeFilename(Utils.forkTitle);
 
@@ -1268,18 +1264,10 @@ namespace ScriptHelper
 
             myMovie.title = Utils.forkTitle;
 
-            MovieTitle.Text = myMovie.title;
+            MovieTitle.Text = Utils.forkTitle;
+            TopMovieTitle.Text = "Title: " + Utils.forkTitle;
 
             saveCurrentMovie();
-
-
-
-
-
-
-
-
-
         }
 
         private void ApplySceneTextEdits_Click(object sender, EventArgs e)

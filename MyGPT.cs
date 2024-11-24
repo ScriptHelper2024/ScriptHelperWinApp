@@ -1491,10 +1491,6 @@ namespace ScriptHelper
             percent = (int)(percentDbl * 100);
             percent = percent - 100;
 
-            if (percent < 10)
-            {
-                return "The Movie Text is already long enough.";
-            }
             string response = "";
 
             string systemPrompt = $"You are a professional analyst and writer for a movie studio working on a movie. {Utils.getProfilePrompt(myForm, "MovieText")}"; 
