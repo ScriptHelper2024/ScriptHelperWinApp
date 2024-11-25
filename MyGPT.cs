@@ -2930,6 +2930,17 @@ It's important that you make no other changes to the text.  Do not include any e
             // parse the json response
             dynamic jsonObject = JsonConvert.DeserializeObject(jsonResponse);
 
+            if (jsonObject == null)
+            {
+                return new SceneObj()
+                {
+                    splitSceneMakeFlag = true,
+                    compressedHint = longSeedScene,
+                    Hint = longSeedScene,
+                    Title = "Make Scene Failed",
+                };
+            }
+
             var sceneText = jsonObject.GetValue("scene_summary").ToString();
             var sceneTitle = jsonObject.GetValue("scene_title").ToString();
 

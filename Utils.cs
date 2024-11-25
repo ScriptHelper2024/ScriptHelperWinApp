@@ -34,7 +34,7 @@ namespace ScriptHelper
 
         public static string forkTitle = "";
 
-        public static string programVersion = "1.0.2";
+        public static string programVersion = "1.0.3";
 
         public static string dumpJSONpwd = "phantom";
         public static int dataVersion = 3;

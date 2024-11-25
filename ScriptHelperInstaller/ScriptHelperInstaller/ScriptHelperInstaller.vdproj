@@ -544,12 +544,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C6D72078E7241E9EA224814910397E7B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D193D13A69EB4479996EC1D119225DFE"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -703,6 +697,12 @@
         "OwnerKey" = "8:_4C160E41D2ED5BBBA43A0C19595BFFFA"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C6D72078E7241E9EA224814910397E7B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -721,6 +721,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -737,6 +745,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -1803,8 +1827,8 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ScriptHelper"
-        "ProductCode" = "8:{E445EAB0-3666-4BF2-9931-78E389F4A59B}"
-        "PackageCode" = "8:{A127C76D-2B31-4C38-9B48-EB271CB41E85}"
+        "ProductCode" = "8:{E445EAB0-0003-4BF2-9931-78E389F4A59B}"
+        "PackageCode" = "8:{24AC70FB-C6DA-4149-8AE9-95B64E14D9C1}"
         "UpgradeCode" = "8:{4428747E-6CA1-4C38-8559-FC2BC41A3984}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1819,7 +1843,7 @@
         "Subject" = "8:"
         "ARPCONTACT" = "8:Jim Rutt"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:"
+        "ARPCOMMENTS" = "8:ScriptHelper"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
@@ -2353,7 +2377,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D193D13A69EB4479996EC1D119225DFE"
             {
-            "SourcePath" = "8:..\\..\\obj\\Release\\ScriptHelper.exe"
+            "SourcePath" = "8:..\\..\\obj\\Debug\\ScriptHelper.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E8A3DF146A0443A1863660CE6B944DF1"
